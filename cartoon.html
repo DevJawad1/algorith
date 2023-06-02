@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="cart" placeholder="Cartoon">
+    <input type="text" name="" id="nod" placeholder="Noodles">
+    <button onclick="submit()">Submit</button>
+    <div id="display"></div>
+    <script>
+
+        const submit = () => {
+            const x = cart.value;
+            const y = nod.value;
+
+            if (nod.value == "" || cart.value == "") {
+                display.innerHTML="Fill your cartoon and noodles"
+            }
+            else {
+                for (let i = 1; i <= x; i++) {
+                    for (let j = 1; j <= y; j++) {
+                        display.innerHTML += `<p>cartoon ${i} noodles ${j}</p>`
+                    }
+                }
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

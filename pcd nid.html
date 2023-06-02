@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display" style="display: flex; justify-content: space-between; flex-wrap: wrap;"></div>
+
+    <input type="text" id="userInput">
+    <button onclick="submit()">check result</button>
+    <div id="result"></div>
+
+    <script>
+
+        for (var i = 0; i <= 100; i++) {
+            display.innerHTML += `<p style="margin:auto;text-align:center;border:1px solid; width:50px">${i}</p>`
+        }
+
+        const submit = () => {
+            if (userInput.value == "") {
+                result.innerHTML = "Fill the input field"
+            }
+            else {
+                if (userInput.value % 3 == 0 && userInput.value % 5 == 0) {
+                    result.innerHTML = "PDC NID"
+                }
+                else if (userInput.value % 3 == 0) {
+                    result.innerHTML = "PDC"
+                }
+                else if (userInput.value % 5 == 0) {
+                    result.innerHTML = "NID"
+                }
+                else {
+                    result.innerHTML = "neither PDC or NID"
+                }
+
+            }
+        }
+
+    </script>
+</body>
+
+</html>

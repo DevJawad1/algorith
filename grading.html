@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="" id="gradeInput" placeholder="Input your score ">
+    <button onclick="grading()">Check result</button>
+    <div id="display"></div>
+    <script>
+        let grade = gradeInput.value
+
+        const grading = () => {
+            if (gradeInput.value == "") {
+                display.innerHTML = "Kindly fill in your score"
+            }
+            else {
+                if (gradeInput.value == 97 || gradeInput.value > 97) {
+                    display.innerHTML = "A+"
+                }
+                else if (gradeInput.value > 92 && gradeInput.value < 96) {
+                    display.innerHTML = "A"
+                }
+                else if (gradeInput.value > 89 && gradeInput.value < 93) {
+                    display.innerHTML = "A-"
+                }
+                else if (gradeInput.value > 86 && gradeInput.value < 90) {
+                    display.innerHTML = "B+"
+                }
+                else if (gradeInput.value > 82 && gradeInput.value < 87) {
+                    display.innerHTML = "B"
+                }
+                else if (gradeInput.value > 79 && gradeInput.value < 83) {
+                    display.innerHTML = "B-"
+                }
+                else if (gradeInput.value > 76 && gradeInput.value < 80) {
+                    display.innerHTML = "C+"
+                }
+                else if (gradeInput.value > 72 && gradeInput.value < 77) {
+                    display.innerHTML = "C"
+                }
+                else if (gradeInput.value > 69 && gradeInput.value < 73) {
+                    display.innerHTML = "C-"
+                }
+                else if (gradeInput.value > 66 && gradeInput.value < 70) {
+                    display.innerHTML = "D+"
+                }
+                else if (gradeInput.value > 62 && gradeInput.value < 67) {
+                    display.innerHTML = "D"
+                }
+                else if (gradeInput.value > 59 && gradeInput.value < 63) {
+                    display.innerHTML = "D-"
+                }
+                else {
+                    display.innerHTML = "F"
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
